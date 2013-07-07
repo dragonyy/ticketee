@@ -32,6 +32,18 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :test, :development do
+gem 'rspec-rails', "~> 2.13.2"
+end
+
+group :test do
+gem 'capybara', "2.0.2"
+end
+
+## CentOS 6.4 Can't run smoothly without JavaScript Runtime, add these and try
+gem 'therubyracer'
+gem 'execjs'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
