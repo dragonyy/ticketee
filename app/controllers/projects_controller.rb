@@ -10,11 +10,14 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
 
+    # 加了 validates 後，成功傳回 true / 失敗傳回 false
     if @project.save
       flash[:notice] = "Project has been created."
       redirect_to @project
     else
-      # nothing, yet
+      flash[:alert] = "Project has not been created."
+
+      render :action => "new"
     end
   end
 
