@@ -17,3 +17,6 @@
 
 # Ignore RubyMine settings
 .idea
+
+# vim swap
+*.swp
